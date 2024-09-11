@@ -68,6 +68,7 @@
 # !my_customized_scatter_file.sct
 #jlink related
 JLink*
+*.uvoptx
 
 Libraries/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf
 Libraries/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.rtf
