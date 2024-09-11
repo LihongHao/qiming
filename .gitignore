@@ -71,9 +71,9 @@ JLink*
 
 Libraries/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf
 Libraries/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.rtf
-Libraries/CMSIS/Documentation/*
-SI/*
-test/DebugConfig/*
+Libraries/CMSIS/Documentation/
+SI/
+test/DebugConfig/
 test/EventRecorderStub.scvd
-test/Objects/*
-test/RTE/*
+test/Objects/
+test/RTE/
