@@ -414,16 +414,6 @@
               <FileType>1</FileType>
               <FilePath>..\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
             </File>
-            <File>
-              <FileName>stm32f4xx_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_syscfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -483,16 +473,6 @@
               <FileName>key.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\key.c</FilePath>
-            </File>
-            <File>
-              <FileName>exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>exti.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\exti.h</FilePath>
             </File>
           </Files>
         </Group>

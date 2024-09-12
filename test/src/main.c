@@ -2,40 +2,31 @@
 #include "led.h"
 #include "beep.h"
 #include "key.h"
+#include "exti.h"
 
 
-/*******************下面代码是通过位带操作实现IO口控制***************************/
+
 int main(void)
 {
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置系统中断优先级分组2
-	delay_init();									//初始化延时函数
-	LED_Init(); 									//初始化LED端口
-	BEEP_Init();									//初始化蜂鸣器端口
-	KEY_Init();
+	u8				t	= 0;
 
-	uint32_t		digit, count = 0;
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置系统中断优先级分组2
+	delay_init();									//延时函数初始化
+	LED_Init(); 									//LED初始化
+	BEEP_Init();									//蜂鸣器初始化
+	EXTIX_Init();									//初始化外部中断输入 
+
 
 	while (1)
 		{
-		key_scan(0);
-
-		if (keydown_data == KEY0_DATA) //key0按下后马上执行相应代码
+		if (t == 200)
 			{
-			digit= 7;
+			LED2				= !LED2;			//LED2 1秒闪烁一次提示系统正在运行
+			t					= 0;
 			}
 
+		t++;
 		delay_ms(5);
-		count	+= 1;
-
-		if (count > 200)
-			{
-			count	= 0;
-			digit	+= 1;
-			LED0	= (digit & 0x1) ? 0: 1;
-			LED1	= (digit & 0x2) ? 0: 1;
-			LED2	= (digit & 0x4) ? 0: 1;
-
-			}
 		}
 }
 
