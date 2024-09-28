@@ -34,12 +34,12 @@ int main(void)
 
 		if (uartRecEnd&&(uartRecIdx<uartRecCount))
 			{
-			if (strcmp((char*)(uartReceive + uartRecIdx), "reset"))
+			if (strcmp((char*)(uartReceive + uartRecIdx), "reset")==0)
 				{
-				count				= 0;
-				uartRecEnd =0;
-				uartRecIdx =uartRecCount;
+				count				= 0;				
 				}
+				uartRecIdx =uartRecCount;
+				uartRecEnd =0;
 			}
 
 		t++;

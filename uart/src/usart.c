@@ -1,5 +1,5 @@
 
-#include "usart1.h"
+#include "usart.h"
 #include "string.h"
 #include "stdlib.h"  
 #include "common.h"
@@ -95,8 +95,6 @@ void USART2_IRQHandler(void)
 		{
 		uint8_t 		rec = USART->DR;
 
-		uartRecCount		= (uartRecCount + 1) &USART_MASK;
-
 		if (rec != 0x0d)
 			{
 			uartReceive[uartRecCount] = rec;
@@ -107,6 +105,8 @@ void USART2_IRQHandler(void)
 			uartRecEnd			= 1;
 			uartReceive[uartRecCount] = 0;
 			}
+
+		uartRecCount		= (uartRecCount + 1) &USART_MASK;
 		}
 	else if (status & USART_SR_TC)
 		{
