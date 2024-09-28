@@ -3,7 +3,7 @@
 #include "beep.h"
 #include "key.h"
 #include "exti.h"
-#include "usart.h"
+#include "usart1.h"
 
 uint32_t		extTriggered[5];
 
